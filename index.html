@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Claude 3 no Amazon Bedrock</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .active {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="amazon.gif" width="100" height="70">
+        <h1>Claude 3 no Amazon Bedrock</h1>
+        <section class="search">
+            <input type="text" placeholder="Pergunte me...">
+            <button type="submit">Pesquisar</button>
+        </section>
+    </header>
+    <main>
+
+        <section class="products">
+            <div class="product">
+                <img src="opus.gif" alt="Opus">
+                <h2>Opus</h2>
+                <p>The Uzi</p>
+            </div>
+            <div class="product">
+                <img src="sonnet.gif" width="100" height="70" alt="Sonnet">
+                <h2>Sonnet</h2>
+                <p>Rápido e intuitivo</p>
+            </div>
+            <div class="product">
+                <img src="haiku.gif" width="100" height="70" alt="Haiku">
+                <h2>Haiku</h2>
+                <p>Lento e inteligente</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Curso Claude 3 no Amazon Bedrock</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                product.addEventListener("mouseover", function() {
+                    this.style.backgroundColor = "orange";
+                });
+
+                product.addEventListener("mouseout", function() {
+                    this.style.backgroundColor = "";
+                });
+
+                product.addEventListener("click", function() {
+                    if (this.classList.contains("active")) {
+                        this.classList.remove("active");
+                    } else {
+                        this.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
